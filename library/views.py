@@ -76,6 +76,9 @@ class BorrowRequestViewSet( CreateModelMixin,ListModelMixin, GenericViewSet):
 
     def get_queryset(self):
         user = self.request.user
+
+        if not user.is_authenticated:
+            return BorrowRequest.objects.none()
         if user.role == "LIBRARIAN":
             return self.queryset
 

@@ -157,9 +157,9 @@ REST_FRAMEWORK = {
 
     "PAGE_SIZE": 10,
 
-    "DEFAULT_THROTTLE_CLASSES": [
-        "rest_framework.throttling.UserRateThrottle",
-    ],
+    # "DEFAULT_THROTTLE_CLASSES": [
+    #     "rest_framework.throttling.UserRateThrottle",
+    # ],
 
     "DEFAULT_THROTTLE_RATES": {
         "borrow": "5/hour",
